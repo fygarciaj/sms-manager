@@ -9,8 +9,8 @@ var express = require('express')
 
 /*
  var row = new models.users;
-    row.name = "Paulo McNally",
-    row.email = "paulomcnally@gmail.com";
+    row.name = "Fabian Garcia",
+    row.email = "fygarciaj@gmail.com";
     row.password = "6b59383bf5e823b168de73ddb0f937a2"; // polin
     row.registered = new Date();
     row.range = 1;
@@ -23,8 +23,8 @@ var express = require('express')
        console.log(row.name + ' addeded');
       }
     });
-*/
 
+*/
 function IsAuthenticated(req,res,next){
   var path = ( req.path == null ) ? '/' : req.path;
   if(req.session.user_id){
@@ -74,4 +74,4 @@ WebSocket.sockets.on("connection", controllers.api.webSocketStart);
 
 app.post("/api",controllers.api.receiber);
 
-server.listen(9827);
+server.listen(9999);
